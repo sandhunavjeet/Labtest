@@ -20,7 +20,7 @@ public class BlazeDempTest {
 
 	@After
 	public void tearDown() throws Exception {
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		driver.close();
 	}
 
@@ -29,10 +29,6 @@ public class BlazeDempTest {
 		// 1. Enter some value into the text box
 			
 				WebElement inputBox = driver.findElement(By.id("Choose Your Departure City"));
-				
-				inputBox.sendKeys("");
-				// 2. Push the button
-				// - GET the button
 				WebElement showMessageButton = driver.findElement(
 						By.cssSelector("form#get-input button"));
 				// - PUSH the button
@@ -42,7 +38,7 @@ public class BlazeDempTest {
 				
 				// ----------------------------------------------
 				// 3. Get the actual output from the screen
-				WebElement outputBox = driver.findElement(By.id(""));
+				WebElement outputBox = driver.findElement(By.id("Choose Your Destination City"));
 				String actualOutput = outputBox.getText();
 				
 				// 4. Check if expected output == actual output
